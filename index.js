@@ -11,9 +11,7 @@ app.set('view engine', 'handlebars');
 
 // Index Route
 app.get('/', (req, res) => {
-    const title = 'Welcome';
     res.render('home', {
-        title: title
     });
 }); 
 
