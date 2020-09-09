@@ -1,0 +1,119 @@
+html,body{
+    overflow-x: hidden;
+}
+
+a{
+    color: #a2697d;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+}
+  
+a:hover {
+    color: #888888;
+}
+  
+a:active {
+    text-decoration: none;
+}
+
+/* Home Page */
+#homepage {
+    position:relative;
+    width:100%;
+    height:100%;
+    align-content: center;
+}
+
+#homepage a{
+    color: #a2697d;
+    font-size: 24px;
+    font-size: 4vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#homepage a:link, #homepage a:visited{
+    text-decoration: none;
+}
+  
+#homepage a:hover {
+    color: #888888;
+}
+  
+#hompepage a:active {
+    text-decoration: none;
+}
+
+/* About Page */
+#aboutpage{
+    background-color: transparent; 
+    width:100%;
+}
+
+#aboutpage-content{
+    display: flex;
+    justify-content: center;
+    background-color: transparent; 
+    opacity: 1.0; 
+    border-radius: 5px;
+}
+
+#aboutpage-content p{
+    color: black; 
+    line-height: 1.5; 
+    font-size: 18px; 
+    text-align:justify;
+}
+
+#aboutpage-image{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+#aboutpage-image img{
+    width: 75%; 
+    border-radius: 5px;
+    align-self: center;
+}
+
+/* Projects Page */
+#projectentry{
+    background-color: #F5F7F2; 
+    width:80%;
+    margin-left: 10%;
+    border: 1px solid #D2D5D0;
+    box-shadow:  
+         -1px 1px #D2D5D0,
+         -2px 2px #D2D5D0,
+         -3px 3px #D2D5D0,
+         -4px 4px #D2D5D0,
+         -5px 5px #D2D5D0;
+    position: relative;
+    align-content: left;
+}
+
+#projectentry-content{
+    
+    display: flex;
+    padding: 1%;
+}
+
+#projectentry-content p{
+    color: black; 
+    line-height: 1.5; 
+    font-size: 18px; 
+}
+
+#projectentry-image{
+    display: block;
+    margin: 0 auto;
+}
+
+#projectentry-image img{
+    width: 100%; 
+    height: auto;
+    border-radius: 5px;
+}

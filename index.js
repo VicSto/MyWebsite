@@ -9,11 +9,24 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
+// Retrieve res Folder
+app.use('/public', express.static(__dirname + '/Public'));
+
 // Index Route
 app.get('/', (req, res) => {
     res.render('home', {
     });
 }); 
+
+app.get('/about', (req, res) => {
+    res.render('about', {
+    });
+});
+
+app.get('/projects', (req,res) =>{
+    res.render('projects', {
+    });
+});
 
 const port = 5000;
 
