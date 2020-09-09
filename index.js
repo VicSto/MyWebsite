@@ -9,8 +9,8 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
-// Retrieve res Folder
-app.use('/public', express.static(__dirname + '/Public'));
+// Retrieve public Folder
+app.use(express.static(__dirname + '/public'));
 
 // Index Route
 app.get('/', (req, res) => {
