@@ -41,8 +41,18 @@ a:active {
     color: #888888;
 }
   
-#hompepage a:active {
+#homepage a:active {
     text-decoration: none;
+}
+
+#home_about_page {
+    background-color: transparent;
+    width:100%;
+    display: none;
+}
+
+#home_projects_page {
+    display: none;
 }
 
 /* About Page */
@@ -53,10 +63,7 @@ a:active {
 
 #aboutpage-content{
     display: flex;
-    justify-content: center;
-    background-color: transparent; 
-    opacity: 1.0; 
-    border-radius: 5px;
+    justify-content: left;
 }
 
 #aboutpage-content p{
