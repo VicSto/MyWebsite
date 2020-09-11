@@ -1,7 +1,6 @@
 const pages = {
-    HOME : 0,
-    ABOUT_PAGE : 1,
-    PROJECTS_PAGE : 2
+    ABOUT_PAGE : 0,
+    PROJECTS_PAGE : 1
 }
 
 const scrollDir = {
@@ -12,16 +11,15 @@ const scrollDir = {
 var is_fading = false;
 var fade_timeout = 750;
 
-let currIndex = pages.HOME;
+let currIndex = pages.ABOUT_PAGE;
 
-let home_navlinks = document.getElementById("home_navigation_list")
 let about_page = document.getElementById("home_about_page")
 let projects_page = document.getElementById("home_projects_page")
 
 $(document).ready(function () {
 
     // fade in initial element
-    throttled_fade_in("#home_navigation_list");
+    throttled_fade_in("#home_about_page");
 
     // bind our scroll event logic to all browser types
     $('html').bind('mousewheel DOMMouseScroll touchmove', function (e) {
@@ -43,33 +41,13 @@ $(document).ready(function () {
 
 function toggle_element_view(scroll_dir){
     is_fading = true;
+    at_bottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight;
+    at_top = window.scrollY === 0;
+
     switch(currIndex)
     {
-        case pages.HOME:
-            if (scroll_dir === scrollDir.DOWN)
-            {
-                throttled_fade_out("#home_navigation_list");
-                setTimeout(
-                    function () {
-                        throttled_fade_in("#home_about_page");
-                    }, fade_timeout
-                );
-                currIndex = pages.ABOUT_PAGE;
-            }
-            break;
-        
         case pages.ABOUT_PAGE:
-            if (scroll_dir === scrollDir.UP)
-            {
-                throttled_fade_out("#home_about_page");
-                setTimeout(
-                    function () {
-                        throttled_fade_in("#home_navigation_list");
-                    }, fade_timeout
-                );
-                currIndex = pages.HOME;
-            }
-            else if (scroll_dir === scrollDir.DOWN)
+            if (at_bottom && scroll_dir === scrollDir.DOWN)
             {
                 throttled_fade_out("#home_about_page");
                 setTimeout(
@@ -82,7 +60,7 @@ function toggle_element_view(scroll_dir){
             break;
 
         case pages.PROJECTS_PAGE:
-            if (scroll_dir === scrollDir.UP)
+            if (at_top && scroll_dir === scrollDir.UP)
             {
                 throttled_fade_out("#home_projects_page");
                 setTimeout(
@@ -134,4 +112,16 @@ function throttled_fade_toggle(ele, timeout=fade_timeout) {
         {
             return;
         }, timeout);
+}
+
+function down_button_pressed() {
+    if (is_fading === false){
+        toggle_element_view(scrollDir.DOWN);
+    }
+}
+
+function up_button_pressed() {
+    if (is_fading === false){
+        toggle_element_view(scrollDir.UP);
+    }
 }
