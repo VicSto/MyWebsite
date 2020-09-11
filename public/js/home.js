@@ -9,7 +9,7 @@ const scrollDir = {
 }
 
 var is_fading = false;
-var fade_timeout = 750;
+var fade_timeout = 550;
 
 let currIndex = pages.ABOUT_PAGE;
 
@@ -19,6 +19,7 @@ let projects_page = document.getElementById("home_projects_page")
 $(document).ready(function () {
 
     // fade in initial element
+    throttled_fade_in("#home_down_arrow");
     throttled_fade_in("#home_about_page");
 
     // bind our scroll event logic to all browser types
@@ -50,8 +51,10 @@ function toggle_element_view(scroll_dir){
             if (at_bottom && scroll_dir === scrollDir.DOWN)
             {
                 throttled_fade_out("#home_about_page");
+                throttled_fade_out("#home_down_arrow");
                 setTimeout(
                     function () {
+                        throttled_fade_in("#home_up_arrow");
                         throttled_fade_in("#home_projects_page");
                     }, fade_timeout
                 );
@@ -63,9 +66,11 @@ function toggle_element_view(scroll_dir){
             if (at_top && scroll_dir === scrollDir.UP)
             {
                 throttled_fade_out("#home_projects_page");
+                throttled_fade_out("#home_up_arrow");
                 setTimeout(
                     function () {
                         throttled_fade_in("#home_about_page");
+                        throttled_fade_in("#home_down_arrow");
                     }, fade_timeout
                 );
                 currIndex = pages.ABOUT_PAGE;

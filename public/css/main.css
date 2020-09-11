@@ -69,15 +69,16 @@ a:active {
 }
 
 #home_up_arrow {
+    display: none;
     width: 7%;
     height: auto;
     align-self: center;
 }
 
 #down_nav_pane {
+    display: flex;
     position: relative;
     margin-bottom: 1px;
-    display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
@@ -86,6 +87,7 @@ a:active {
 }
 
 #home_down_arrow {
+    display: none;
     width: 7%;
     height: auto;
     align-self: center;
