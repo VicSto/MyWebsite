@@ -8,6 +8,7 @@ const scrollDir = {
     DOWN: 1
 }
 
+var is_mobile = false;
 var is_fading = false;
 var fade_timeout = 550;
 
@@ -18,12 +19,16 @@ let projects_page = document.getElementById("home_projects_page")
 
 $(document).ready(function () {
 
+    if ($('#mobile-detect').css('display')=='none') {
+        is_mobile = true;
+    }
+
     // fade in initial element
     throttled_fade_in("#home_down_arrow");
     throttled_fade_in("#home_about_page");
 
     // bind our scroll event logic to all browser types
-    $('html').bind('mousewheel DOMMouseScroll touchmove', function (e) {
+    $('html').bind('mousewheel DOMMouseScroll', function (e) {
         // console.log(e.type)
         var delta = 0;
         if (e.type === "mousewheel" || e.type === "DOMMouseScroll")
@@ -34,7 +39,7 @@ $(document).ready(function () {
             // placeholder, need to add logic for touchscreen scrolling
             
         }
-        if (is_fading === false){
+        if (is_fading === false && is_mobile === false){
             toggle_element_view((delta < 0) ? scrollDir.DOWN : scrollDir.UP);
         }
     });
