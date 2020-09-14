@@ -57,6 +57,31 @@ a:active {
     display: none;
 }
 
+#home_aboutpage-content{
+    display: flex;
+    justify-content: left;
+}
+
+#home_aboutpage-content p{
+    color: black; 
+    line-height: 1.5; 
+    font-size: 18px; 
+    text-align:justify;
+}
+
+#home_aboutpage-image{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+#home_aboutpage-image img{
+    width: 75%; 
+    border-radius: 5px;
+    align-self: center;
+}
+
 #up_nav_pane {
     position: relative;
     margin-bottom: 1px;
@@ -99,29 +124,95 @@ a:active {
     width:100%;
 }
 
-#aboutpage-content{
-    display: flex;
-    justify-content: left;
+#aboutpage-banner {
+    display: block;
+    max-width: 95vw;
+    height: auto;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    position: relative;
 }
 
-#aboutpage-content p{
+#aboutpage-banner hr {
+    height: 0.25vh;
+    border-width: 0px;
+    color: gray;
+    background-color: gray;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+}
+
+#aboutpage-banner h2 {
+    font-size: 3.0vh;
+    text-align: center;
+}
+
+#aboutpage-banner p{
     color: black; 
     line-height: 1.5; 
-    font-size: 18px; 
+    font-size: 1.5vh; 
     text-align:justify;
+    justify-self: left;
 }
 
-#aboutpage-image{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
+#aboutpage-banner-image-landscape {
+    display: block;
+    position: relative !important;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 100vh;
 }
 
-#aboutpage-image img{
-    width: 75%; 
-    border-radius: 5px;
-    align-self: center;
+#aboutpage-banner-image-portrait {
+    display: block;
+    position: relative !important;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 100vh;
+    max-width: 75vw;
+    margin-left: 60vw;
+}
+
+#aboutpage-content-bubble-1{
+    z-index: 2;
+    background-color: #f0f2f2;
+    width: 40vw;
+    height: auto;
+    left: 50vw;
+    top: 15%;
+    position: absolute;
+    border-radius: 1.5vw;
+    padding: 5vw;
+    padding-top: 2vw;
+    padding-bottom:2vw;
+}
+
+#aboutpage-content-bubble-2 {
+    z-index: 2;
+    background-color: #f0f2f2;
+    width: 40%;
+    height: auto;
+    top: 30%;
+    left: 10%;
+    border-radius: 1vh;
+    position: absolute;
+    padding: 5vw;
+    padding-top: 2vw;
+    padding-bottom:2vw;
+}
+
+#aboutpage-content-bubble-3 {
+    z-index: 2;
+    background-color: #f0f2f2;
+    width: 40%;
+    height: auto;
+    left: 55%;
+    top: 25%;
+    position: absolute;
+    border-radius: 1.5vw;
+    padding: 5vw;
+    padding-top: 2vw;
+    padding-bottom:2vw;
 }
 
 /* Projects Page */
