@@ -130,7 +130,6 @@ a:active {
 }
 
 #aboutpage-banner p{
-    color: black; 
     line-height: 1.5; 
     font-size: 1.5vh; 
     text-align:justify;
@@ -194,7 +193,7 @@ a:active {
 }
 
 /* Smartphones ----------- */
-@media only screen and (max-width: 900px), only screen and (max-device-width: 1024px) {
+@media only screen and (max-width: 812px), only screen and (max-device-width: 1024px) {
     #mobile-detect { display: none; }
     #aboutpage-banner{
         margin-left: 0%;
@@ -241,11 +240,24 @@ a:active {
   }
 
 /* Projects Page */
+#projects-banner {
+    background-image: url(/images/IMG_2400.jpg); 
+    background-size: cover; 
+    background-position: center center;
+    width:100vw; 
+    height:auto;
+    margin-top: -16px;
+}
+
+#projects-banner h2 {
+    font-size: 3.0vh;
+}
+
 #projectentry{
     background-color: #F5F7F2; 
     width:80%;
     margin-left: 10%;
-    border: 1px solid #D2D5D0;
+    border: 0.25vw solid #D2D5D0;
     box-shadow:  
          -1px 1px #D2D5D0,
          -2px 2px #D2D5D0,
@@ -262,9 +274,10 @@ a:active {
 }
 
 #projectentry-content p{
-    color: black; 
     line-height: 1.5; 
-    font-size: 18px; 
+    font-size: 1.5vh; 
+    text-align:justify;
+    justify-self: left;
 }
 
 #projectentry-image{
