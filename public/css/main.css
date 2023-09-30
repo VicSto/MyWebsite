@@ -214,6 +214,20 @@ a:active {
 /* Smartphones ----------- */
 @media only screen and (max-width: 812px), only screen and (max-device-width: 1024px) {
     #mobile-detect { display: none; }
+
+    #home_about_me_section {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #home_aboutpage-image {
+        top: -15vh;
+    }
+
+    #home_aboutpage-content {
+        top: -15vh;
+    }
+
     .aboutpage-banner{
         margin-left: 0%;
         margin-right: 0%;
