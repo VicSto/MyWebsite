@@ -225,9 +225,13 @@ a:active {
         padding: 1;
     }
 
+    #aboutpage-banner-avanos {
+        position: relative;
+    }
+
     #aboutpage-content-bubble-1{
         left: 1vw;
-        top: 5vh;
+        top: 15vh;
     }
     #aboutpage-content-bubble-2{
         left: 1vw;
@@ -249,7 +253,7 @@ a:active {
     }
 
     .aboutpage-banner-image {
-        padding-top: 75vh;
+        padding-top: 100vh;
         left: 0vw;
         width: 100vw;
     }
