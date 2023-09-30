@@ -1,4 +1,4 @@
-<div id="aboutpage-banner">
+<div id="aboutpage-banner-overview" class="aboutpage-banner">
   <div class="aboutpage-banner-image" id="aboutpage-banner-image-landscape" style="margin-top: -16px; background-image: url(/images/IMG_0346.jpg);"></div>
   <div class="aboutpage-content-bubble" id="aboutpage-content-bubble-1">
     <h2>Professional Background</h2>
@@ -6,8 +6,75 @@
     <p>
       I started my career after graduating University of California, 
       Irvine with a <strong>B.S. in Software Engineering</strong>. After graduating, 
-      I began contracting as a Software Engineer with Avanos Medical. 
-      At this time, I began working on my main project that would provide
+      I began contracting as a Software Engineer with <strong>Avanos Medical</strong>.
+      <a href="#aboutpage-banner-Avanos">See more about Avanos below</a>. I worked with Avanos
+      until 2020, when corporate restructuring closed our office location and provided me an
+      opportunity to re-invest in myself. I rejoined the workforce in Early 2021 when I accepted
+      a short-term contract with Intel and later joining Tesla full-time where I work today.
+      <a href="#aboutpage-banner-Tesla">See more about Tesla below</a>. 
+      <br><br>
+      If you would like to see more about me, check out <a href="#aboutpage-banner-personal">my 
+        Personal Background below</a>.
+      <br><br>
+      If you would like to learn more about my interests, check out 
+      <a href="aboutpage-banner-passion">My Passion below</a>.
+    </p>
+  </div>
+</div>
+<div id="aboutpage-banner-Tesla" class="aboutpage-banner">
+  <div class="aboutpage-banner-image" id="aboutpage-banner-image-landscape" style="background-image: url(/images/IMG_0001.jpg);"></div>
+  <div class="aboutpage-content-bubble" id="aboutpage-content-bubble-3">
+    <h2>Tesla Motors</h2>
+    <hr>
+    <p>
+      I joined Tesla Motors in May 2021, and began working on their financial servicing team 
+      building the <strong>.NET</strong> web application, with a <strong>React</strong> front-end
+      operating with <strong>Typescript</strong>. In my role, I have worked comprehensively with
+      <strong>RabbitMQ</strong> and <strong>Apache Kafka</strong> for data exchange, and 
+      <strong>MySQL</strong> and <strong>Akamai NetStorage</strong> for data storage. I have 
+      worked directly with deploying web applications with <strong>Docker</strong>, 
+      <strong>Kubernetes</strong>, and <strong>Jenkins</strong>. I have worked in advanced 
+      <strong>Splunk</strong> monitoring and alarming, with integrations to 
+      <strong>OpsGenie</strong> for accelerating production issue resolution.
+      
+      
+      Some highlights from my time at Tesla:
+      <br><br>
+      Introducing the E-Sign capabilities for the case management system. 
+      Previously, field operatives would have to engage customers to "wet sign"
+      PDF documents and provide them to Tesla to perform actions like extend their
+      lease agreement, or settle their contract. I owned and engineered a 
+      factory-pattern automation that engaged with Tesla's document generation
+      team through <strong>Apache Kafka</strong> to notify, collect consent, 
+      and E-Sign their packets to complete their desired action. This 
+      implementation will support any future case management activities in a 
+      <strong>"Plug & Play"</strong> manner that dramatically reduces overhead 
+      for onboarding E-Sign actions.
+      <br><br>
+      Transitioning the team's <strong>MySQL</strong> database to a partitioned format for highly
+      trafficked tables. With the scale of Tesla's ecosystem constantly growing at
+      a rapid pace, our system's capability to retrieve data had become costly
+      even after the introduction of more indexes. It was at this time that the
+      decision was made to scale up our database at the table-level. I presented
+      the option to partition the tables using a <a href="https://dev.mysql.com/doc/
+      refman/8.0/en/partitioning-hash.html">"HASH Partitioning"</a> format that could 
+      leverage the "Reservation Number" identifier that is present in every Tesla 
+      vehicle by making a <a href="https://learn.microsoft.com/en-us/dotnet/api/
+      system.security.cryptography.md5?view=net-7.0">MD5 Sum</a> of the string and 
+      taking the modulo of the number of partitions to assign a "Contract Group" to 
+      every entry in our tables. This change gave an upfront <strong>>50% performance 
+      improvement</strong> that, based on load testing performed, will persist for if the
+      business scales up over 100x it's current size. 
+    </p>
+  </div>
+</div>
+<div id="aboutpage-banner-Avanos" class="aboutpage-banner">
+  <div class="aboutpage-banner-image" id="aboutpage-banner-image-landscape" style="background-image: url(/images/IMG_0002.jpg);"></div>
+  <div class="aboutpage-content-bubble" id="aboutpage-content-bubble-2">
+    <h2>Avanos Medical</h2>
+    <hr>
+    <p>
+      When I joined Avanos Medical in 2017, I began working on my main project that would provide
       real-time identification of anatomical landmarks from an ultrasound 
       video input. From this project, I built an expertise in <strong>Python</strong> application
       programming, and working with the <strong>PyQt</strong> framework.
@@ -24,14 +91,14 @@
       <br><br>During this time, I was brought on full-time as a <strong>Senior Software Engineer</strong>, 
       and have since contributed to multiple other projects that gave me experience in embedded 
       engineering (<strong>C++, C</strong>) and mobile engineering (<strong>Swift, Objective C</strong>).
-        
     </p>
   </div>
 </div>
-<div id="aboutpage-banner">
+
+<div id="aboutpage-banner-personal" class="aboutpage-banner">
   <div class="aboutpage-banner-image" id="aboutpage-banner-image-portrait" style="background-image: url(/images/IMG_0938.jpg);"></div>
-  <div id="aboutpage-content-bubble-2-filter"></div>
-  <div class="aboutpage-content-bubble" id="aboutpage-content-bubble-2">
+  <div id="aboutpage-content-bubble-4-filter"></div>
+  <div class="aboutpage-content-bubble" id="aboutpage-content-bubble-4">
     <h2>Personal Background</h2>
     <hr>
     <p>
@@ -50,9 +117,9 @@
     </p>
   </div>
 </div>
-<div id="aboutpage-banner">
+<div id="aboutpage-banner-passion" class="aboutpage-banner">
   <div class="aboutpage-banner-image" id="aboutpage-banner-image-landscape" style="background-image: url(/images/IMG_0212.jpg);"></div>
-  <div class="aboutpage-content-bubble" id="aboutpage-content-bubble-3">
+  <div class="aboutpage-content-bubble" id="aboutpage-content-bubble-5">
     <h2>My Passion: Cooking/Baking</h2>
     <hr>
     <p>

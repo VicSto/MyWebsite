@@ -30,8 +30,6 @@ a:active {
 }
 
 #homepage a{
-    font-size: 20px;
-    font-size: 2vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -82,6 +80,17 @@ a:active {
     align-self: center;
 }
 
+.home_arrow_text {
+    display: none;
+    color: black; 
+    line-height: 1.5; 
+    font-size: 18px; 
+    text-align:justify;
+    width: auto;
+    height: auto;
+    align-self: center;
+}
+
 .home_arrow {
     display: none;
     width: 7vh;
@@ -106,7 +115,7 @@ a:active {
     width:100%;
 }
 
-#aboutpage-banner {
+.aboutpage-banner {
     display: block;
     max-width: 95vw;
     height: auto;
@@ -115,7 +124,7 @@ a:active {
     position: relative;
 }
 
-#aboutpage-banner hr {
+.aboutpage-banner hr {
     height: 0.25vh;
     border-width: 0px;
     color: gray;
@@ -124,12 +133,12 @@ a:active {
     margin-top: 1vh;
 }
 
-#aboutpage-banner h2 {
+.aboutpage-banner h2 {
     font-size: 3.0vh;
     text-align: center;
 }
 
-#aboutpage-banner p{
+.aboutpage-banner p{
     line-height: 1.5; 
     font-size: 1.5vh; 
     text-align:justify;
@@ -168,16 +177,26 @@ a:active {
 }
 
 #aboutpage-content-bubble-2 {
-    top: 30%;
-    left: 10%;
+    top: 20%;
+    left: 5%;
 }
 
 #aboutpage-content-bubble-3 {
+    left: 57%;
+    top: 15%;
+}
+
+#aboutpage-content-bubble-4 {
+    left: 10%;
+    top: 25%;
+}
+
+#aboutpage-content-bubble-5 {
     left: 55%;
     top: 25%;
 }
 
-#aboutpage-content-bubble-2-filter {
+#aboutpage-content-bubble-4-filter {
     z-index: 1;
     background-color: #535b69;
     background-image: url("/images/IMG_1603.jpg");
@@ -195,7 +214,7 @@ a:active {
 /* Smartphones ----------- */
 @media only screen and (max-width: 812px), only screen and (max-device-width: 1024px) {
     #mobile-detect { display: none; }
-    #aboutpage-banner{
+    .aboutpage-banner{
         margin-left: 0%;
         margin-right: 0%;
     }
@@ -210,13 +229,21 @@ a:active {
         left: 1vw;
         top: 5vh;
     }
+    #aboutpage-content-bubble-2{
+        left: 1vw;
+        top: 5vh;
+    }
+    #aboutpage-content-bubble-3{
+        left: 1vw;
+        top: 5vh;
+    }
     
-    #aboutpage-content-bubble-2 {
+    #aboutpage-content-bubble-4 {
         left: 1vw;
         top: 20vh;
     }
     
-    #aboutpage-content-bubble-3 {
+    #aboutpage-content-bubble-5 {
         left: 1vw;
         top: 10vh;
     }

@@ -25,6 +25,7 @@ $(document).ready(function () {
 
     // fade in initial element
     throttled_fade_in("#home_down_arrow");
+    throttled_fade_in("#home_down_arrow_text");
     throttled_fade_in("#home_about_page");
 
     // bind our scroll event logic to all browser types
@@ -57,9 +58,11 @@ function toggle_element_view(scroll_dir){
             {
                 throttled_fade_out("#home_about_page");
                 throttled_fade_out("#home_down_arrow");
+                throttled_fade_out("#home_down_arrow_text");
                 setTimeout(
                     function () {
                         throttled_fade_in("#home_up_arrow");
+                        throttled_fade_in("#home_up_arrow_text");
                         throttled_fade_in("#home_projects_page");
                     }, fade_timeout
                 );
@@ -72,10 +75,12 @@ function toggle_element_view(scroll_dir){
             {
                 throttled_fade_out("#home_projects_page");
                 throttled_fade_out("#home_up_arrow");
+                throttled_fade_out("#home_up_arrow_text");
                 setTimeout(
                     function () {
                         throttled_fade_in("#home_about_page");
                         throttled_fade_in("#home_down_arrow");
+                        throttled_fade_in("#home_down_arrow_text");
                     }, fade_timeout
                 );
                 currIndex = pages.ABOUT_PAGE;
