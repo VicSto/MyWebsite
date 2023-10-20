@@ -1,0 +1,4 @@
+# ignore the installed node modules
+node_modules
+# ignore any npm debug logs
+npm-debug.log
